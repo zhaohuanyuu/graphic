@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+    <style>
+      #canvas{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+</head>
+<body>
+    <canvas id="canvas">Curretn stock price: 77.00</canvas>
+    <script>
+        var canvas = document.getElementById('canvas');
+        var ctx = canvas.getContext('2d');
+       
+        // 绘制填充
+        // ctx.fillRect(25, 25, 100, 100);
+        // 清除绘制
+        // ctx.clearRect(45, 45, 60, 60);
+        // 绘制描边
+        // ctx.strokeRect(50, 50, 50, 50); 
+
+        ctx.beginPath();
+        ctx.moveTo(75, 50);
+        ctx.lineTo(100, 75);
+        ctx.lineTo(100, 25);
+        ctx.fill();
+
+    </script>
+</body>
+</html>
