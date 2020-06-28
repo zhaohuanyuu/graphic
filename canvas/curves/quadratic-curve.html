@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arc</title>
+</head>
+<body>
+    <canvas id="canvas" id="myCanvas" width="578" height="250"></canvas>
+    <script>
+      var canvas = document.querySelector('#canvas');
+      var ctx = canvas.getContext('2d');
+
+      var x = canvas.width / 2;
+      var y = canvas.height / 2;
+      var radius = 75;
+      var startAngle = 1.1 * Math.PI;
+      var endAngle = 1.9 * Math.PI;
+
+      ctx.beginPath();
+      ctx.arc(x, y, radius, startAngle, endAngle);
+      ctx.lineWidth = 15;
+
+      ctx.strokeStyle = 'lightcoral';
+      ctx.stroke();
+    </script>
+</body>
+</html>

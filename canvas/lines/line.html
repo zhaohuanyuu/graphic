@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Line</title>
+    <style>
+        canvas{
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="500" height="200"></canvas>
+    <script>
+        var canvas = document.querySelector('#canvas');
+        var context = canvas.getContext('2d');
+
+        // 新建一条路径，生成之后，图形绘制命令被指向到路径上生成路径。
+        context.beginPath();
+        // 设置起点：将笔触移动到指定的坐标x以及y上。
+        context.moveTo(30, 20);
+        // 绘制一条从当前位置到指定x以及y位置的直线。
+        context.lineTo(130, 20);
+        // 通过线条来绘制图形轮廓。
+        context.stroke();
+    </script>
+</body>
+</html>
